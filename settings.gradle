@@ -1,1 +1,2 @@
-include ':app', ':mydefineview2'
+include ':app', ':mydefineview2', ':inflatertest', ':dynamicscrollview'
+include ':horizaotalScrollview_clickitem'

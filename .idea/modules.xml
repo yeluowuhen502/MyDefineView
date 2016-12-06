@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyDefineView.iml" filepath="$PROJECT_DIR$/MyDefineView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamicscrollview/dynamicscrollview.iml" filepath="$PROJECT_DIR$/dynamicscrollview/dynamicscrollview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/horizaotalScrollview_clickitem/horizaotalScrollview_clickitem.iml" filepath="$PROJECT_DIR$/horizaotalScrollview_clickitem/horizaotalScrollview_clickitem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inflatertest/inflatertest.iml" filepath="$PROJECT_DIR$/inflatertest/inflatertest.iml" />
       <module fileurl="file://$PROJECT_DIR$/mydefineview2/mydefineview2.iml" filepath="$PROJECT_DIR$/mydefineview2/mydefineview2.iml" />
     </modules>
   </component>
