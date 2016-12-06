@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ll_mian = (LinearLayout) findViewById(R.id.ll_main);
         LayoutInflater mInflater = LayoutInflater.from(this);
-        View btn = mInflater.inflate(R.layout.button_layout,null);
+        View btn = mInflater.inflate(R.layout.button_layout, null);
         ll_mian.addView(btn);
     }
 }
