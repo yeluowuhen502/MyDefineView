@@ -16,6 +16,7 @@ import android.view.View;
 
 public class MyView extends View {
     private Paint mPaint;
+
     public MyView(Context context) {
         super(context);
         initViews();
@@ -45,9 +46,9 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(Color.YELLOW);
-        canvas.drawRect(0,0,getWidth(),getHeight(),mPaint);
+        canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
         mPaint.setColor(Color.BLUE);
-        String text = "HEllo";
-        canvas.drawText(text,0,getHeight()/2,mPaint);
+        String text = "Hello";
+        canvas.drawText(text, 0, getHeight() / 2, mPaint);
     }
 }

@@ -1,2 +1,2 @@
-include ':app', ':mydefineview2', ':inflatertest', ':dynamicscrollview'
+include ':app', ':mydefineview2', ':inflatertest', ':dynamicscrollview', ':myrxjavatest', ':retrofittest'
 include ':horizaotalScrollview_clickitem'

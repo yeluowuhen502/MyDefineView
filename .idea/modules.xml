@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/horizaotalScrollview_clickitem/horizaotalScrollview_clickitem.iml" filepath="$PROJECT_DIR$/horizaotalScrollview_clickitem/horizaotalScrollview_clickitem.iml" />
       <module fileurl="file://$PROJECT_DIR$/inflatertest/inflatertest.iml" filepath="$PROJECT_DIR$/inflatertest/inflatertest.iml" />
       <module fileurl="file://$PROJECT_DIR$/mydefineview2/mydefineview2.iml" filepath="$PROJECT_DIR$/mydefineview2/mydefineview2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myrxjavatest/myrxjavatest.iml" filepath="$PROJECT_DIR$/myrxjavatest/myrxjavatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofittest/retrofittest.iml" filepath="$PROJECT_DIR$/retrofittest/retrofittest.iml" />
     </modules>
   </component>
 </project>

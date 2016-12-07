@@ -28,7 +28,7 @@ public class MyVpVp extends ViewPager {
             case MotionEvent.ACTION_DOWN:
                 count = getAdapter().getCount();
                 currentPosition = getCurrentItem();
-                Log.d("position",currentPosition+"");
+                Log.d("position", currentPosition + "");
                 getParent().requestDisallowInterceptTouchEvent(true);
                 break;
             case MotionEvent.ACTION_MOVE:
