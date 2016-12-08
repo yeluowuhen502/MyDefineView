@@ -21,11 +21,15 @@
         <activity
             android:name=".CounterViewTestActivity"
             android:label="计数器View">
-
         </activity>
         <activity
             android:name=".TittleViewActivity"
             android:label="标题的组合控件">
+
+        </activity>
+        <activity
+            android:name=".MyDefineListViewActivity"
+            android:label="自定义ListView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
