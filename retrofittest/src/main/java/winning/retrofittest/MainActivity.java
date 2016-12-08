@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -73,5 +74,13 @@ public class MainActivity extends AppCompatActivity {
     public interface IWeatherBiz {
         @GET("weather_mini")
         Call<Object> getWeatherReturn(@Query("city") String city);
+
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+            @Override
+            public void log(String message) {
+                //打印retrofit日志
+                Log.i("RetrofitLog", "retrofitBack = " + message);
+            }
+        });
     }
 }
