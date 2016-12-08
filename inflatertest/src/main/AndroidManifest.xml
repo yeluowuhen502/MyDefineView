@@ -17,11 +17,15 @@
         <activity
             android:name=".ThirdActivity"
             android:label="自定义View">
-
         </activity>
         <activity
             android:name=".CounterViewTestActivity"
             android:label="计数器View">
+
+        </activity>
+        <activity
+            android:name=".TittleViewActivity"
+            android:label="标题的组合控件">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
