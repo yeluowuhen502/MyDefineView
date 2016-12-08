@@ -6,6 +6,9 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,9 +50,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void GetMyWeatherData() {
+        //retrofit日志
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder()
+//                                .cache(cache)
+                .addInterceptor(loggingInterceptor)
+                .connectTimeout(2000, TimeUnit.SECONDS)
+                .readTimeout(2000, TimeUnit.SECONDS)
+                .writeTimeout(2000, TimeUnit.SECONDS)
+                .build();
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://wthrcdn.etouch.cn/")
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
                 .build();
         IWeatherBiz userBiz = retrofit.create(IWeatherBiz.class);
         Call<Object> call = userBiz.getWeatherReturn("芜湖");
@@ -75,12 +90,13 @@ public class MainActivity extends AppCompatActivity {
         @GET("weather_mini")
         Call<Object> getWeatherReturn(@Query("city") String city);
 
-        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
-            @Override
-            public void log(String message) {
-                //打印retrofit日志
-                Log.i("RetrofitLog", "retrofitBack = " + message);
-            }
-        });
     }
+
+    HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+        @Override
+        public void log(String message) {
+            //打印retrofit日志
+            Log.i("RetrofitLog", "retrofitBack = " + message);
+        }
+    });
 }

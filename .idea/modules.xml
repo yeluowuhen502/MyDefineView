@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/mydefineview2/mydefineview2.iml" filepath="$PROJECT_DIR$/mydefineview2/mydefineview2.iml" />
       <module fileurl="file://$PROJECT_DIR$/myrxjavatest/myrxjavatest.iml" filepath="$PROJECT_DIR$/myrxjavatest/myrxjavatest.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofittest/retrofittest.iml" filepath="$PROJECT_DIR$/retrofittest/retrofittest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spinner/spinner.iml" filepath="$PROJECT_DIR$/spinner/spinner.iml" />
     </modules>
   </component>
 </project>

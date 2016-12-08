@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/mydefineview2" />
             <option value="$PROJECT_DIR$/myrxjavatest" />
             <option value="$PROJECT_DIR$/retrofittest" />
+            <option value="$PROJECT_DIR$/spinner" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
