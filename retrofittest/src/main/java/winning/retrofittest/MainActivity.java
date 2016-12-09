@@ -4,10 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.gson.Gson;
-
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -65,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 .baseUrl("http://wthrcdn.etouch.cn/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
+                //增加返回值为Oservable<T>的支持
+//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         IWeatherBiz userBiz = retrofit.create(IWeatherBiz.class);
         Call<Object> call = userBiz.getWeatherReturn("芜湖");
@@ -79,6 +80,27 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("infoooo", "normalGet:" + t.toString() + "");
             }
         });
+
+//        userBiz.getWeatherReturn("芜湖")
+//        .subscribeOn(Schedulers.io())
+//                .unsubscribeOn(Schedulers.io())
+//                .subscribe(new Subscriber<ReturnBean>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onNext(ReturnBean bean) {
+//                        ReturnBean myBean = bean;
+//                    }
+//                });
+
     }
 
     public interface IUserBiz {
